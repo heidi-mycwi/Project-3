@@ -21,6 +21,12 @@
  * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
  * OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ *Modifcation
+ *
+ *Name					Date			Description
+ *Heidi Pearson			03/13/17		updated the feed for status to new
+ *
  */
 /*jshint
          asi:true,
@@ -128,13 +134,12 @@ define( [ "yasmf" ], function( _y ) {
      * The visible status of the note. Read-write with setStatus and
      * getStatus; the property is status. Update hp 03/10/17
      */
-    self._status = "";
+    self._status = "New";
     self.getStatus = function() {
       return self._status;
     };
 	 self.setStatus = function( theStatus ) {
       self._status = theStatus;
-      self._modifiedDate = new Date();
       self.notify( "statusChanged" );
     };
     Object.defineProperty( self, "status", {
